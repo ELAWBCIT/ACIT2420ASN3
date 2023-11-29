@@ -72,7 +72,7 @@ ls -al
 ```
 - Now change the ownership of your file so you own it 
 ```bash
-chown -R <username>:<groupname> /home/.ssh 
+chown -R <username>:<groupname> /home/<username>/.ssh 
 ```
 - **NOTE: Groupname should be the same as your username**
 - Finally check if your permissions are correct now for your .ssh file with ls -al
@@ -81,7 +81,7 @@ ls -al /home/<username>
 ```
 - You can finally exit your machine and test to see if you can get on. 
 ```bash
-ssh -i <<path-to-your-key> <username>@<ip of the debian machine> 
+ssh -i <path-to-your-key> <username>@<ip of the debian machine> 
 ```
 
 ## Locking the Root User 
@@ -92,7 +92,7 @@ cd /etc/ssh
 ```
 - You can open up the sshd_config file with vim 
 ```bash
-vim sshd_config 
+sudo vim sshd_config 
 ```
 - Edit the line in the vim file that says PermitRootLogin. Change it from "yes" to "no". 
 - Once completed, use the following command to refresh 
