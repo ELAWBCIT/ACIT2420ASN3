@@ -184,7 +184,7 @@ sudo ln -s /etc/nginx/sites-available/my_site.conf /etc/nginx/sites-enabled
 ```
 - Now restart nginx to refresh it
 ```bash 
-sudo systemctl status nginx
+sudo systemctl restart nginx
 ```
 - You can check if your file works now by doing the following test command 
 ```bash
